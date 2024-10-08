@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BACKGROUND */
+.bg-bg1 {
+    background: url("../img/bg-1.jpeg");
+}
+.bg-bg2 {
+    background: url("../img/bg-2.jpeg");
+}
+.bg-bg3 {
+    background: url("../img/bg-3.jpeg");
+}
+.bg-bg4 {
+    background: url("../img/bg-4.jpeg");
+}
+.bg-bg5 {
+    background: url("../img/bg-5.jpeg");
+}
+.bg-bg6 {
+    background: url("../img/bg-6.jpg");
+}
+.bg-bg7 {
+    background: url("../img/bg-7.jpg");
+}
+.bg-bg8 {
+    background: url("../img/bg-8.jpeg");
+}
+.bg-bg9 {
+    background: url("../img/bg-9.jpeg");
+}
+.bg-bg10 {
+    background: url("../img/bg-10.jpg");
+}
+.bg-bg11 {
+    background: url("../img/bg-11.jpg");
+}
+.bg-bg12 {
+    background: url("../img/bg-12.jpeg");
+}
+.bg-bg13 {
+    background: url("../img/bg-13.jpg");
+}
+
+.nav-link{
+    @apply lg:text-slate-200 lg:my-0 lg:w-full my-2 mx-auto text-center w-[100px] block text-black no-underline relative after:content-[''] after:scale-0 after:h-[2.5px] after:absolute lg:after:bg-slate-200 after:-bottom-[2px] after:rounded-lg after:transition-all after:duration-500 hover:after:scale-100 after:bg-slate-900 after:left-0 after:w-full;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.navbar.active nav {
+    @apply translate-x-0 transition-all duration-500;
+}
+
+.hamburgerButton {
+    @apply relative;
+}
+
+.hamburger-garis {
+    @apply w-[30px] h-[2px] absolute rounded-sm bg-slate-900 duration-300 right-5;
+}
+.hamburgerButton.diklik .hamburger-garis:nth-child(1) {
+    @apply origin-top-right rotate-[45deg];
+}
+.hamburgerButton.diklik .hamburger-garis:nth-child(2) {
+    @apply scale-0;
+}
+.hamburgerButton.diklik .hamburger-garis:nth-child(3) {
+    @apply origin-bottom-right -rotate-[45deg];
+}
+
+.buttonLink {
+    @apply overflow-hidden tracking-wider relative hover:shadow-lg shadow-orange-400 px-5 py-2 border-2 border-orange-500 rounded-md text-slate-100 font-semibold before:content-[''] before:w-0 before:h-full before:absolute before:top-0 before:left-0 before:bg-orange-500 before:z-[-1] hover:before:w-full before:transition-all before:duration-500;
+}
+.buttonHome .buttonLink:nth-child(2) {
+    @apply before:w-full hover:before:w-0;
+}
+
+.font-ubuntu {
+    font-family: 'Ubuntu', sans-serif;
+}
