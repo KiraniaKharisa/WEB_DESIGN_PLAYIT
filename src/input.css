@@ -49,7 +49,7 @@
 }
 
 .navbar.active nav {
-    @apply translate-x-0 transition-all duration-500;
+    @apply translate-x-0;
 }
 
 .hamburgerButton {
@@ -70,7 +70,7 @@
 }
 
 .buttonLink {
-    @apply overflow-hidden tracking-wider relative hover:shadow-lg shadow-orange-400 px-5 py-2 border-2 border-orange-500 rounded-md text-slate-100 font-semibold before:content-[''] before:w-0 before:h-full before:absolute before:top-0 before:left-0 before:bg-orange-500 before:z-[-1] hover:before:w-full before:transition-all before:duration-500;
+    @apply font-montserrat overflow-hidden relative hover:shadow-lg shadow-orange-400 text-[11px] tracking-wider px-3 py-2 border-2 border-orange-500 rounded-md text-slate-100 font-semibold lg:text-lg lg:px-7 lg:py-4 before:content-[''] before:w-0 before:h-full before:absolute before:top-0 before:left-0 before:bg-orange-500 before:z-[-1] hover:before:w-full before:transition-all before:duration-500;
 }
 .buttonHome .buttonLink:nth-child(2) {
     @apply before:w-full hover:before:w-0;
@@ -78,4 +78,17 @@
 
 .font-ubuntu {
     font-family: 'Ubuntu', sans-serif;
+}
+.font-lato {
+    font-family: 'Lato', sans-serif;
+}
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.cardTentang {
+  @apply bg-slate-200 px-5 py-4 rounded-md flex flex-col justify-center items-center shadow-xl w-full;
 }
