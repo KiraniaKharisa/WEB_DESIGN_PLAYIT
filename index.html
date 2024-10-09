@@ -12,11 +12,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden font-poppins">
     <header class="flex justify-between navbar fixed top-0 right-0 z-[100] w-full">
-        <div class="bg-slate-100 py-5 px-7 z-[-2] w-full">
-            LOGO
+        <div class="bg-slate-100 py-5 px-7 z-[-2] w-full relative">
+            <h3 class="opacity-0">Logo</h3>
+            <img class="absolute top-2 w-[50px]" src="./img/logo.png" alt="" />
         </div>
 
         <button class="hamburgerButton z-[4] lg:hidden">
@@ -25,7 +27,7 @@
             <span class="hamburger-garis bottom-[2.55rem]"></span>
         </button>
 
-        <nav class="lg:flex lg:relative lg:gap-5 lg:pr-16 lg:items-center lg:translate-x-0 lg:py-0 lg:bg-transparent lg:flex-row lg:w-auto lg:top-0 translate-x-[2000px] pr-0 text-center py-5 bg-slate-100 flex-col w-full absolute top-[64px] left-0">
+        <nav class="lg:flex lg:relative lg:gap-5 lg:pr-16 lg:items-center lg:translate-x-0 lg:py-0 lg:bg-transparent lg:flex-row lg:w-auto lg:top-0 translate-x-[2000px] pr-0 text-center py-5 bg-slate-100 flex-col w-full absolute top-[64px] left-0 transition-all duration-500">
             <div class="lg:block hidden bg-orange-600 absolute w-[125%] -skew-x-12 -right-2 h-full z-[-1]"></div>
             <a class="nav-link" href="#beranda">Beranda</a>
             <a class="nav-link" href="#tentang">Tentang</a>
@@ -48,13 +50,65 @@
             </div>
        </div>
     </section>
-    <section>
-        <div>
-            <div>
-               <img src="img/gula.png" alt="">
+    
+    <section id="tentang" class="relative z-[2]">
+      <div class="px-5 pb-5">
+        <div class="grid grid-cols-1 -mt-8 gap-5 w-full md:grid-cols-2 lg:grid-cols-4">
+          
+            <div class="cardTentang">
+              <div class="pb-2">
+                <i class="fa-solid fa-cubes-stacked text-4xl text-orange-500"></i>
+              </div>
+              <div class="">
+                <h3 class="font-bold font-poppins text-center pb-2 tracking-widest">Produksi Gula</h3>
+                <p class="text-center text-sm tracking-wider leading-relaxed">Lorem ipsum, atau yang juga dikenal sebagai lipsum, adalah teks standar yang digunakan untuk mendemostrasikan elemen grafis atau presentasi visual</p>
+              </div>
+            </div>
+            <div class="cardTentang">
+              <div class="pb-2">
+                <i class="fa-solid fa-cubes-stacked text-4xl text-orange-500"></i>
+              </div>
+              <div class="">
+                <h3 class="font-bold font-poppins text-center pb-2 tracking-widest">Produksi Gula</h3>
+                <p class="text-center text-sm tracking-wider leading-relaxed">Lorem ipsum, atau yang juga dikenal sebagai lipsum, adalah teks standar yang digunakan untuk mendemostrasikan elemen grafis atau presentasi visual</p>
+              </div>
+            </div>
+            <div class="cardTentang">
+              <div class="pb-2">
+                <i class="fa-solid fa-cubes-stacked text-4xl text-orange-500"></i>
+              </div>
+              <div class="">
+                <h3 class="font-bold font-poppins text-center pb-2 tracking-widest">Produksi Gula</h3>
+                <p class="text-center text-sm tracking-wider leading-relaxed">Lorem ipsum, atau yang juga dikenal sebagai lipsum, adalah teks standar yang digunakan untuk mendemostrasikan elemen grafis atau presentasi visual</p>
+              </div>
+            </div>
+            <div class="cardTentang">
+              <div class="pb-2">
+                <i class="fa-solid fa-cubes-stacked text-4xl text-orange-500"></i>
+              </div>
+              <div class="">
+                <h3 class="font-bold font-poppins text-center pb-2 tracking-widest">Produksi Gula</h3>
+                <p class="text-center text-sm tracking-wider leading-relaxed">Lorem ipsum, atau yang juga dikenal sebagai lipsum, adalah teks standar yang digunakan untuk mendemostrasikan elemen grafis atau presentasi visual</p>
+              </div>
             </div>
         </div>
+        
+        <div class="mt-10">
+          <div class="">
+            <h3 class="font-bold text-2xl">Visi</h3>
+            <p class="font-ubuntu tracking-wider">Menjadikan PTPN XI sebagai perusahaan perkebunan yang mampu meningkatkan kesejahteraan <span class="font-semibold">stakeholder</span> secara berkesinambungan</p>
+          </div>
+          <div class="">
+            <img class="" src="img/sugarCane.png" alt="" />
+          </div>
+          <div class="">
+            <h3 class="">Misi</h3>
+            <p class="">Menyelenggarakan agribisnis, utamanya yang berbasis tebu yang melalui pemanfaatan <span class=""></span></p>
+          </div>
+        </div>
+      </div>
     </section>
+    
     <script src="src/script.js"></script>
 </body>
 </html>
