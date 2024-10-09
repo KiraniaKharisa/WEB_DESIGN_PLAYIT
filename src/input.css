@@ -47,6 +47,9 @@
     @apply lg:text-slate-200 lg:my-0 lg:w-full my-2 mx-auto text-center w-[100px] block text-black no-underline relative after:content-[''] after:scale-0 after:h-[2.5px] after:absolute lg:after:bg-slate-200 after:-bottom-[2px] after:rounded-lg after:transition-all after:duration-500 hover:after:scale-100 after:bg-slate-900 after:left-0 after:w-full;
     font-family: 'Poppins', sans-serif; 
 }
+.nav-link.active {
+    @apply after:scale-100;
+}
 
 .navbar.active nav {
     @apply translate-x-0;
@@ -70,7 +73,7 @@
 }
 
 .buttonLink {
-    @apply font-montserrat overflow-hidden relative hover:shadow-lg shadow-orange-400 text-[11px] tracking-wider px-3 py-2 border-2 border-orange-500 rounded-md text-slate-100 font-semibold lg:text-lg lg:px-7 lg:py-4 before:content-[''] before:w-0 before:h-full before:absolute before:top-0 before:left-0 before:bg-orange-500 before:z-[-1] hover:before:w-full before:transition-all before:duration-500;
+    @apply font-montserrat overflow-hidden relative hover:shadow-lg shadow-orange-400 text-[11px] tracking-wider px-3 py-2 border-2 border-orange-500 rounded-md text-slate-100 font-semibold lg:text-lg lg:px-5 lg:py-3 before:content-[''] before:w-0 before:h-full before:absolute before:top-0 before:left-0 before:bg-orange-500 before:z-[-1] hover:before:w-full before:transition-all before:duration-500;
 }
 .buttonHome .buttonLink:nth-child(2) {
     @apply before:w-full hover:before:w-0;
@@ -98,5 +101,5 @@
     font-weight: normal;
 }
 .cardTentang {
-  @apply bg-slate-200 px-5 py-4 rounded-md flex flex-col justify-center items-center shadow-xl w-full;
+  @apply overflow-hidden bg-slate-200 px-5 py-4 rounded-md flex flex-col justify-center items-center shadow-xl lg:shadow-2xl w-full relative after:w-full after:h-full after:absolute after:top-0 after:left-0 after:bg-orange-500 after:z-[1] after:-translate-y-[1000px] after:transition-all after:duration-700 hover:after:-translate-y-0;
 }
