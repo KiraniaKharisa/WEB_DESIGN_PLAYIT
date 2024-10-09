@@ -25,3 +25,20 @@ window.onscroll = () => {
         }
     })
 }
+
+function nextSlide() {
+  document.querySelector(".slider").appendChild(document.querySelectorAll(".slides")[0])
+}
+function prevSlide() {
+  document.querySelector(".slider").prepend(document.querySelectorAll(".slides")[document.querySelectorAll(".slides").length - 1])
+}
+
+document.querySelector(".next").addEventListener("click", () => {
+  nextSlide();
+})
+
+document.querySelector(".prev").addEventListener("click", () => {
+  prevSlide();
+})
+
+// setInterval(nextSlide, 3000);
