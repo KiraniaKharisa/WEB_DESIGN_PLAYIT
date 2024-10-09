@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="overflow-x-hidden font-poppins">
-    <header class="flex justify-between navbar fixed top-0 right-0 z-[100] w-full">
-        <div class="bg-slate-100 py-5 px-7 z-[-2] w-full relative">
+    <header class="flex justify-between navbar fixed top-0 right-0 z-[100] w-full shadow-lg">
+        <div class="bg-slate-100 py-5 px-7 z-[-2] w-full relative shadow-lg">
             <h3 class="opacity-0">Logo</h3>
             <img class="absolute top-2 w-[50px]" src="./img/logo.png" alt="" />
         </div>
@@ -27,7 +27,7 @@
             <span class="hamburger-garis bottom-[2.55rem]"></span>
         </button>
 
-        <nav class="lg:flex lg:relative lg:gap-5 lg:pr-16 lg:items-center lg:translate-x-0 lg:py-0 lg:bg-transparent lg:flex-row lg:w-auto lg:top-0 translate-x-[2000px] pr-0 text-center py-5 bg-slate-100 flex-col w-full absolute top-[64px] left-0 transition-all duration-500">
+        <nav class="lg:flex lg:relative lg:gap-5 lg:pr-16 lg:items-center lg:translate-x-0 lg:py-0 lg:bg-transparent lg:flex-row lg:shadow-none lg:w-auto lg:top-0 translate-x-[2000px] pr-0 text-center py-5 bg-slate-100 flex-col w-full absolute top-[64px] left-0 transition-all duration-500 shadow-lg">
             <div class="lg:block hidden bg-orange-600 absolute w-[125%] -skew-x-12 -right-2 h-full z-[-1]"></div>
             <a class="nav-link" href="#beranda">Beranda</a>
             <a class="nav-link" href="#tentang">Tentang</a>
@@ -39,11 +39,11 @@
         </nav>
     </header>
 
-    <section id="beranda" class="w-full h-screen bg-bg1 bg-cover bg-center lg:pt-52 pt-40 ">
+    <section id="beranda" class="w-full h-screen bg-bg1 bg-cover bg-center lg:pt-52 xl:pt-80 pt-40 xl:bg-no-repeat xl:bg-cover xl:bg-center">
         <div class="absolute w-full h-full bg-black opacity-50 z-[1] top-0 left-0"></div>
         <div class="relative flex flex-col justify-center items-center z-[2] lg:px-32 px-10">
-            <h1 class="max-sm:tracking-wider text-slate-100 text-[50px] lg:text-[70px] font-extrabold mb-3 text-center max-sm:leading-[3.5rem]">PABRIK GULA SEMBORO</h1>
-            <p class="font-ubuntu text-center max-sm:my-5 text-sm text-slate-100 lg:text-lg font-medium">Pabrik Gula Semboro adalah salah satu pabrik gula yang berada di Jember, Jawa Timur, Indonesia. Pabrik ini berdiri sejak era kolonial Belanda dan menjadi bagian penting dari industri gula di wilayah tersebut. Pabrik ini mengolah tebu dari sekitar area perkebunan di Jember dan sekitarnya.</p>
+            <h1 class="max-sm:tracking-wider text-slate-100 text-[50px] lg:text-[70px] font-extrabold mb-3 text-center max-sm:leading-[3.5rem] xl:text-[80px]">PABRIK GULA SEMBORO</h1>
+            <p class="font-ubuntu text-center max-sm:my-5 text-sm text-slate-100 lg:text-lg font-medium xl:text-2xl">Pabrik Gula Semboro adalah salah satu pabrik gula yang berada di Jember, Jawa Timur, Indonesia. Pabrik ini berdiri sejak era kolonial Belanda dan menjadi bagian penting dari industri gula di wilayah tersebut. Pabrik ini mengolah tebu dari sekitar area perkebunan di Jember dan sekitarnya.</p>
             <div class="flex gap-x-10 mt-3 buttonHome">
                 <a href="" class="buttonLink">Lokasi Pabrik</a>
                 <a href="" class="buttonLink">Selengkapnya</a>
@@ -93,19 +93,58 @@
             </div>
         </div>
         
-        <div class="mt-10">
-          <div class="">
-            <h3 class="font-bold text-2xl">Visi</h3>
+        <div class="my-14 lg:my-0 lg:px-10 lg:mt-5 flex lg:flex-row flex-col items-center justify-center">
+          <div class="lg:w-[30%] ">
+            <h3 class="font-bold text-2xl xl:text-4xl font-roboto">Visi</h3>
             <p class="font-ubuntu tracking-wider">Menjadikan PTPN XI sebagai perusahaan perkebunan yang mampu meningkatkan kesejahteraan <span class="font-semibold">stakeholder</span> secara berkesinambungan</p>
           </div>
-          <div class="">
-            <img class="" src="img/sugarCane.png" alt="" />
+          <div class="lg:w-[30%]">
+            <img class="lg:w-[400px] w-[300px] mx-auto" src="img/sugarCane.png" alt="" />
           </div>
-          <div class="">
-            <h3 class="">Misi</h3>
-            <p class="">Menyelenggarakan agribisnis, utamanya yang berbasis tebu yang melalui pemanfaatan <span class=""></span></p>
+          <div class="lg:w-[30%]">
+            <h3 class="font-bold text-2xl xl:text-4xl font-roboto">Misi</h3>
+            <p class="font-ubuntu tracking-wider">Menyelenggarakan agribisnis, utamanya yang berbasis tebu yang melalui pemanfaatan <span class=""></span></p>
           </div>
         </div>
+      </div>
+      <div class="lg:mt-5">
+        <div>
+            <h1 class="xl:text-5xl text-2xl text-center font-bold font-Poppins text-slate-950">SEJARAH PABRIK GULA <span class="bg-orange-500 p-2 text-slate-100">SEMBORO</span></h1>
+            <hr class="w-[25%] h-2 mt-2 bg-orange-500 rounded-md mx-auto">
+        </div>
+        <div class="xl:px-16 px-10 flex flex-col-reverse lg:flex-row items-center">
+            <p class="text-slate-950 px-7 lg:mt-20 text-justify font-sans text-[15px] xl:text-[17px] font-ubuntu"> <strong class="font-bold font-roboto text-xl">Zaman Pendudukan Belanda</strong> <br>
+                Pabrik Gula Semboro didirikan pada tahun 1921 oleh H. V. A (
+                 Handels Vereniging Amsterdam
+                ) sebagai pemilik swasta dari Negeri Belanda, dengan kapasitas 24.000kuintal tebu tiap 24 jam. Pada tahun 1928, pabrik siap dan mulai menggiling tebu.Tahun 1930 sampai dengan 1932, pabrik mulai menggiling dengan kapasitas penuhdengan luas lahan 2.103 Ha. Pada tahun 1933 sampai dengan tahun1939, aktivitas berhenti, sedangkan pada tahun 1940, mulai menggiling kembali dengan luas lahan1.2.71,4 Ha</p>
+                <img class="w-full lg:w-1/3 my-5 lg:my-0" src="img/sejarah3.png" alt="">
+        </div>
+        <div class="xl:px-16 px-10 flex items-center flex-col lg:flex-row">
+            <img class="lg:w-1/3 w-full lg:my-0 my-5" src="img/sejarah2.png" alt="">
+            <p class="text-slate-950 px-7 text-justify font-sans text-[15px] xl:text-[18px] font-ubuntu"><strong class="font-bold font-roboto text-xl">Zaman Pendudukan Jepang dan Perang Kemerdaan Indonesia</strong>  <br>
+
+                Sejak tahun 1941 smapai dengan tahun 1949, kegiatan berhenti lagi pada masaPerang Dunia II. Pada saat itu Indonesia dalam pendudukan Jepang dan masa PerangKemerdekaan. Pada saat itu Pabrik Gula Semboro mengalami kerusakan-kerusakanhingga terus diadakan perbaikan sesudah masa revolusi.</p>
+        </div>
+        <div class="xl:px-16 px-10 flex items-center flex-col-reverse lg:flex-row">
+            <div class="flex flex-col">
+                <h3 class="font-roboto font-bold text-xl mb-3">Penguasaan Bangsa Indonesia</h3>
+                <div class="flex gap-2">
+                    <div class="text-[15px] lg:text-[18px]">1. </div>
+                    <div class="text-[15px] lg:text-[18px]">Masa PPN Inspektoran VIIISejak diambil alih oleh Pemerintah Indonesia sampai dengan tahun giling 1968,Pabrik Gula Senboro juga termasuk dalam PPN Inspektorat VIII yang berkedudukan di Jalan Jembatan Merah Surabaya bersama PD De Maas, PGWringinanom, PG Olean, PG Panji, PG Asembagus, dan PG Prajekan</div>
+                </div>
+                <div class="flex gap-2">
+                    <div class="text-[15px] lg:text-[18px]">2. </div>
+                    <div class="text-[15px] lg:text-[18px]">Masa P Perkebunan XXIVSejak masa giling 1969 sampai dengan tahun 1975, Pabrik Gula Semborotermasuk PNP XXIV, bersama PG Kedawung, PG Wonolangun, PG Gending, PGPrajarakan, dan PG jatiroto.</div>
+                </div>
+                <div class="flex gap-2">
+                    <div class="text-[15px] lg:text-[18px]">3. </div>
+                    <div class="text-[15px] lg:text-[18px]">Masa PT Perkebunan XXIV – XXV (Persero)
+                        Sejak tahun 1976 dengan adanya penggabungan PNP XXIV dan XXV, PabrikGula Semboro termasuk dalam lingkungan PT Perkebunan XXIV – XXV(persero) yang berkedudukan di Jalan Merak no. 1 Surabaya.</div>
+                </div>
+            </div>
+            <img class="w-full lg:w-1/3 my-5 lg:my-0" src="img/sejarah1.png" alt="">
+        </div>
+
       </div>
     </section>
     
