@@ -121,7 +121,7 @@
 }
 
 .slider .slides {
-  @apply absolute top-1/2 -translate-y-1/2 bg-cover bg-center transition-all duration-500 rounded-md shadow-2xl flex justify-start items-end top-[initial] bottom-[-200px] w-[120px] h-[120px] lg:top-[50%] lg:bottom-0 lg:w-[240px] lg:h-[320px];
+  @apply absolute top-1/2 -translate-y-1/2 bg-cover bg-center transition-all duration-500 rounded-md shadow-2xl shadow-slate-800 flex justify-start items-end top-[initial] bottom-[-200px] w-[120px] h-[120px] lg:top-[50%] lg:bottom-0 lg:w-[240px] lg:h-[320px];
 }
 .slider .slides:nth-child(1),
 .slider .slides:nth-child(2) {
@@ -177,4 +177,38 @@
 
 .navigasi div {
   @apply w-[50px] h-[50px] rounded-full bg-orange-500 flex justify-center items-center text-xl mt-5 lg:mt-0;
+}
+
+.sliderUmkm {
+  @apply w-full h-[180px] border-2 border-red-200 relative;
+}
+
+.sliderUmkm .list {
+  @apply flex gap-x-3;
+}
+
+.cardmenu {
+  @apply w-[200px] h-[170px] rounded-md absolute bg-red-200 shadow-md px-5 py-3 flex justify-center items-center flex-col;
+  animation: playGeser 10s linear infinite;
+  animation-delay: calc(10s / var(--jumlah) * (var(--position) - 5));
+}
+@keyframes playGeser {
+  from {
+    @apply left-[110%];
+  }
+  to {
+    left: calc(210px * -1);
+  }
+}
+
+.cardmenu .gambar {
+  @apply w-full;
+}
+
+.cardmenu .info {
+  @apply text-center;
+}
+
+.cardmenu .info h3 {
+  @apply text-xl font-ubuntu font-semibold tracking-wider;
 }
