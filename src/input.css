@@ -105,52 +105,67 @@
 }
 .slider {
   @apply absolute;
-  inset: 80px 200px 80px 80px;
+  inset: 40px 40px 200px 40px;
 }
 @media (min-width: 768px) {
-  inset: 40px 40px 200px 40px;
+  .slider {
+    inset: 40px 40px 200px 40px;
+  }
   
 }
 @media (min-width: 1024px) {
-  inset: 80px 200px 80px 80px;
+  .slider {
+    inset: 80px 200px 80px 80px;
+  }
   
 }
 
-
 .slider .slides {
-  @apply absolute top-1/2 -translate-y-1/2 w-[240px] h-[320px] bg-cover bg-center transition-all duration-500 rounded-md shadow-2xl flex justify-start items-end;
+  @apply absolute top-1/2 -translate-y-1/2 bg-cover bg-center transition-all duration-500 rounded-md shadow-2xl flex justify-start items-end top-[initial] bottom-[-200px] w-[120px] h-[120px] lg:top-[50%] lg:bottom-0 lg:w-[240px] lg:h-[320px];
 }
 .slider .slides:nth-child(1),
 .slider .slides:nth-child(2) {
-  @apply absolute top-0 left-0 w-full h-full translate-y-0 bg-cover rounded-xl shadow-lg shadow-slate-600 transition-all duration-500;
+  @apply absolute left-0 w-full h-full translate-y-0 bg-cover rounded-xl shadow-lg shadow-slate-600 transition-all duration-500 top-[initial] bottom-0 lg:top-0;
 }
 .slider .slides:nth-child(3) {
-  @apply bg-cover;
-  left: calc(50% + 240px);
+  @apply bg-cover left-0;
 }
 .slider .slides:nth-child(4) {
-  @apply bg-cover;
-  left: calc(50% + 500px);
+  @apply bg-cover left-[150px];
 }
 .slider .slides:nth-child(5) {
-  @apply bg-cover;
-  left: calc(50% + 760px);
+  @apply bg-cover left-[300px];
 }
 .slider .slides:nth-child(6) {
-  @apply bg-cover;
-  left: calc(50% + 1020px);
+  @apply bg-cover left-[450px];
   opacity: 0;
 }
 
+@media (min-width: 1024px) {
+  .slider .slides:nth-child(3) {
+    left: calc(50% + 240px);
+  }
+  .slider .slides:nth-child(4) {
+    left: calc(50% + 500px);
+  }
+  .slider .slides:nth-child(5) {
+    left: calc(50% + 760px);
+  }
+  .slider .slides:nth-child(6) {
+    left: calc(50% + 1020px);
+    opacity: 0;
+  }
+}
+
 .content {
-  @apply relative max-w-[600px] transition-all duration-300 p-[40px] text-slate-300 opacity-0 translate-y-16;
+  @apply relative max-w-[600px] transition-all duration-300 p-[20px] md:p-[40px] text-slate-300 opacity-0 translate-y-16;
 }
 .content h1 {
-  @apply text-5xl font-poppins tracking-widest font-extrabold mb-2;
+  @apply text-2xl md:text-5xl font-poppins tracking-widest font-extrabold md:mb-2;
   text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
 }
 .content p {
-  @apply text-lg font-ubuntu tracking-wider font-semibold;
+  @apply text-sm md:text-lg font-ubuntu tracking-wider font-semibold;
   text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
 }
 
@@ -161,5 +176,5 @@
 
 
 .navigasi div {
-  @apply w-[50px] h-[50px] rounded-full bg-orange-500 flex justify-center items-center text-xl;
+  @apply w-[50px] h-[50px] rounded-full bg-orange-500 flex justify-center items-center text-xl mt-5 lg:mt-0;
 }
