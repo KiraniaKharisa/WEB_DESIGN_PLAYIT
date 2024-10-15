@@ -180,7 +180,13 @@
 }
 
 .sliderUmkm {
-  @apply w-full overflow-hidden h-[180px] border-2 border-red-200 relative;
+  @apply w-full overflow-hidden h-[180px] relative mb-10;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 5% 95%,
+    transparent
+  );
 }
 
 .sliderUmkm .list {
@@ -188,17 +194,79 @@
 }
 
 .cardmenu {
-  @apply w-[200px] h-[170px] rounded-md bg-red-200 shadow-md px-5 py-3 flex justify-center items-center flex-col absolute left-full;
-  animation: umkmPlay 10s linear infinite!important;
-  animation-delay: calc();
+  @apply w-[200px] h-[170px] rounded-md bg-blue-200 px-5 py-3 flex justify-center items-center flex-col absolute left-full transition-all duration-500;
+  animation: umkmPlay 10s linear infinite;
+  animation-delay: calc((10s / var(--jumlah)) * (var(--position) - 1))!important;
 }
+.sliderUmkm[reverse="true"] .cardmenu {
+  animation: umkmPlayReverse 10s linear infinite;
+}
+
+.cardmenu:hover {
+  @apply bg-orange-500;
+}
+
+.sliderUmkm:hover .cardmenu {
+  animation-play-state: paused!important;
+}
+
+
 
 @keyframes umkmPlay {
   from {
     @apply left-full;
   }
   to {
-    left: calc(200px - 1);
+    left: calc(200px * -8.3);
+  }
+}
+
+@keyframes umkmPlayReverse {
+  from {
+    left: calc(200px * -8.3);
+  }
+  to {
+    @apply left-full;
+  }
+}
+
+@media (min-width: 768px) {
+  @keyframes umkmPlay {
+    from {
+      @apply left-full;
+    }
+    to {
+      left: calc(200px * -7.3);
+    }
+  }
+
+  @keyframes umkmPlayReverse {
+    from {
+      left: calc(200px * -7.3);
+    }
+    to {
+      @apply left-full;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  @keyframes umkmPlay {
+    from {
+      @apply left-full;
+    }
+    to {
+      left: calc(200px * -6.3);
+    }
+  }
+
+  @keyframes umkmPlayReverse {
+    from {
+      left: calc(200px * -6.3);
+    }
+    to {
+      @apply left-full;
+    }
   }
 }
 
