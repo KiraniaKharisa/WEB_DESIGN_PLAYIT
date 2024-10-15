@@ -180,7 +180,7 @@
 }
 
 .sliderUmkm {
-  @apply w-full h-[180px] border-2 border-red-200 relative;
+  @apply w-full overflow-hidden h-[180px] border-2 border-red-200 relative;
 }
 
 .sliderUmkm .list {
@@ -188,16 +188,17 @@
 }
 
 .cardmenu {
-  @apply w-[200px] h-[170px] rounded-md absolute bg-red-200 shadow-md px-5 py-3 flex justify-center items-center flex-col;
-  animation: playGeser 10s linear infinite;
-  animation-delay: calc(10s / var(--jumlah) * (var(--position) - 5));
+  @apply w-[200px] h-[170px] rounded-md bg-red-200 shadow-md px-5 py-3 flex justify-center items-center flex-col absolute left-full;
+  animation: umkmPlay 10s linear infinite!important;
+  animation-delay: calc();
 }
-@keyframes playGeser {
+
+@keyframes umkmPlay {
   from {
-    @apply left-[110%];
+    @apply left-full;
   }
   to {
-    left: calc(210px * -1);
+    left: calc(200px - 1);
   }
 }
 
