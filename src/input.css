@@ -217,13 +217,13 @@
     @apply left-full;
   }
   to {
-    left: calc(200px * -8.3);
+    left: calc(200px * -8.7);
   }
 }
 
 @keyframes umkmPlayReverse {
   from {
-    left: calc(200px * -8.3);
+    left: calc(200px * -8.7);
   }
   to {
     @apply left-full;
