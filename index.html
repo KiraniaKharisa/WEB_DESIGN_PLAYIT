@@ -35,7 +35,6 @@
             <a class="nav-link" href="#pariwisata">Pariwisata</a>
             <a class="nav-link" href="#umkm">UMKM</a>
             <a class="nav-link" href="#budaya">Budaya</a>
-            <a class="nav-link" href="#galery">Galeri</a>
             <a class="nav-link" href="#kontak">Kontak</a>
         </nav>
     </header>
@@ -318,130 +317,77 @@
         </div>
       </div>
 
-      <h3 class="text-center my-8 text-2xl font-bold font-poppins">Menu Minuman</h3>
-      <div class="sliderUmkm" reverse="true">
-        <div class="list" style="--jumlah: 10;">
-          <div class="cardmenu" style="--position: 1;">
-            <div class="gambar">
-              <img src="img/menu/makan/dimsum.png" alt="">
-            </div>
-            <div class="info">
-              <h3>DIMSUM</h3>
-              <h4>Rp. 10.000</h4>
-            </div>
-          </div>
-          <div class="cardmenu" style="--position: 2;">
-            <div class="gambar">
-              <img src="img/menu/makan/dimsum.png" alt="">
-            </div>
-            <div class="info">
-              <h3>DIMSUM</h3>
-              <h4>Rp. 10.000</h4>
-            </div>
-          </div>
-          <div class="cardmenu" style="--position: 3;">
-            <div class="gambar">
-              <img src="img/menu/makan/dimsum.png" alt="">
-            </div>
-            <div class="info">
-              <h3>DIMSUM</h3>
-              <h4>Rp. 10.000</h4>
-            </div>
-          </div>
-          <div class="cardmenu" style="--position: 4;">
-            <div class="gambar">
-              <img src="img/menu/makan/dimsum.png" alt="">
-            </div>
-            <div class="info">
-              <h3>DIMSUM</h3>
-              <h4>Rp. 10.000</h4>
-            </div>
-          </div>
-          <div class="cardmenu" style="--position: 5;">
-            <div class="gambar">
-              <img src="img/menu/makan/dimsum.png" alt="">
-            </div>
-            <div class="info">
-              <h3>DIMSUM</h3>
-              <h4>Rp. 10.000</h4>
-            </div>
-          </div>
-          <div class="cardmenu" style="--position: 6;">
-            <div class="gambar">
-              <img src="img/menu/makan/dimsum.png" alt="">
-            </div>
-            <div class="info">
-              <h3>DIMSUM</h3>
-              <h4>Rp. 10.000</h4>
-            </div>
-          </div>
-          <div class="cardmenu" style="--position: 7;">
-            <div class="gambar">
-              <img src="img/menu/makan/dimsum.png" alt="">
-            </div>
-            <div class="info">
-              <h3>DIMSUM</h3>
-              <h4>Rp. 10.000</h4>
-            </div>
-          </div>
-          <div class="cardmenu" style="--position: 8;">
-            <div class="gambar">
-              <img src="img/menu/makan/dimsum.png" alt="">
-            </div>
-            <div class="info">
-              <h3>DIMSUM</h3>
-              <h4>Rp. 10.000</h4>
-            </div>
-          </div>
-          <div class="cardmenu" style="--position: 9;">
-            <div class="gambar">
-              <img src="img/menu/makan/dimsum.png" alt="">
-            </div>
-            <div class="info">
-              <h3>DIMSUM</h3>
-              <h4>Rp. 10.000</h4>
-            </div>
-          </div>
-          <div class="cardmenu" style="--position: 10;">
-            <div class="gambar">
-              <img src="img/menu/makan/dimsum.png" alt="">
-            </div>
-            <div class="info">
-              <h3>DIMSUM</h3>
-              <h4>Rp. 10.000</h4>
-            </div>
-          </div>
-          
-          
-        </div>
-      </div>
     </section>
-    <section class="lg:flex-row flex-col gap-24 flex bg-orange-500 justify w-full p-12" id="kontak">
-      <img class="lg:w-[450px]" src="img/call.png" alt="">
-      <div class="flex bg-orange-500  flex-col-reverse">
-        <form class="flex flex-col  gap-5" action="">
-          <input class="rounded-md h-10 p-6" placeholder="Email" type="text">
-          <input class="rounded-md h-10 p-6" placeholder="Nama" type="text">
-          <textarea class="h-36 rounded-md resize-none" placeholder="Pesan" name="" id=""></textarea>
-          <button class="w-1/2 mx-auto mb-5  rounded-md shadow-lg border-none lg:p-4 p-3 text-slate-50 text-[15px] bg-red-600 flex justify-center">Kirim</button>
-        </form>
-        <h1 class="lg:text-4xl text-xl pb-5 font-bold font-Poppins text-slate-100">Konsultasikan Dengan Kami!</h1>
+    
+    
+    <section id="kontak" class="px-10 pb-10 md:mt-[100px]">
+      <h1 class="xl:text-5xl lg:text-3xl text-2xl text-center font-bold font-Poppins text-slate-950 leading-relaxed mt-10">Hubungi <span class="bg-orange-500 p-2 text-slate-100">Kami</span></h1>
+      
+      <div class="flex flex-col mt-10 md:flex-row w-full justify-center items-center md:gap-x-5">
+      <div class="w-full md:w-[45%]">
+        <img class="w-full" src="img/call.svg" alt="" />
+      </div>
+        
+      <form action="" method="get" accept-charset="utf-8" class="mt-10 flex flex-col gap-y-5 md:w-[55%]">
+        <div class="flex flex-col gap-y-5 lg:flex-row lg:gap-x-5 lg:w-full">
+          <div class="inputDiv lg:w-full">
+            <input type="text" placeholder="First Name..." class="inputKontak" />
+            <span class="spanInput"></span>
+          </div>
+          <div class="inputDiv lg:w-full">
+            <input type="text" placeholder="Last Name..." class="inputKontak" />
+            <span class="spanInput"></span>
+          </div>
+        </div>
+        
+          <div class="inputDiv">
+          <input type="text" placeholder="Email..."  class="inputKontak"/>
+            <span class="spanInput"></span>
+          </div>
+          
+          <div class="inputDiv">
+          <textarea class="inputKontak resize-none" placeholder="Message..."></textarea>
+            <span class="spanInputArea"></span>
+          </div>
+          
+          <div class="flex justify-end">
+            <button type="submit" class="bg-transparent border-0 border-[.8px] border-orange-500 px-3 py-2 text-[14px] rounded-sm relative z-[1] transition-all duration-500 hover:text-slate-100 before:w-0 before:h-full before:bg-orange-500 before:absolute before:top-0 before:left-0 before:transition-all before:duration-500 before:z-[-1] hover:before:w-full active:scale-95">Kirim Pesan</button>
+          </div>
+      </form>
       </div>
     </section>
     
-    <footer class="bg-gray-800 text-white py-6 px-5">
-      <div class="container mx-auto text-center">
-          <h1 class="text-xl md:text-2xl font-bold mb-2">PABRIK GULA SEMBORO</h1>
-          <p class="mb-4 text-sm">Menyediakan pendidikan berkualitas untuk masa depan yang lebih baik.</p>
-          <div class="flex justify-center space-x-4 space-y-4 w-full bg-red-600">
-              <a href="#" class="text-gray-400 hover:text-white">BERANDA</a>
-              <a href="#" class="text-gray-400 hover:text-white">TENTANG</a>
-              <a href="#" class="text-gray-400 hover:text-white">PARIWISATA</a>
-              <a href="#" class="text-gray-400 hover:text-white">BUDAYA</a>
-              <a href="#" class="text-gray-400 hover:text-white">GALERI</a>
-              <a href="#" class="text-gray-400 hover:text-white">KONTAK</a>
+    <footer class="bg-gray-800 text-white py-6 px-5 lg:px-10">
+      <div class="lg:flex lg:border-b-[.8px] border-slate-100 lg:gap-x-7">
+        <div class="md:flex md:gap-x-6">
+          <div class="">
+            <h3 class="text-2xl font-bold md:text-xl text-center md:text-start">PABRIK GULA SEMBORO</h3>
+            <p class="tracking-wide text-center text-sm md:text-start md:mt-5">Pabrik ini telah dibangun oleh pemilik swasta dari Belanda, yakni HVA (Handels Vereningning Amsterdam) sejak tahun 1921.</p>
           </div>
-          <p class="mt-4 text-sm">© 2024 PG SEMBORO. All rights reserved.</p>
+          
+          <div class="my-5 text-center md:text-start md:my-8">
+            <p class="">
+              <i class="fa-solid fa-phone"></i> (0336) 441006
+            </p>
+            <p class="flex justify-center mt-2 md:justify-start md:translate-x-2">
+              <span class="translate-x-5 md:-translate-x-2"><i class="fa-solid fa-location-dot"></i></span>
+              <span>Jl. Rejoagung No.1, Semboro Lor, Semboro, Kec. Semboro, Kabupaten Jember, Jawa Timur 68157</span>
+            </p>
+              
+          </div>
+        </div>
+        
+        <div class="flex justify-center gap-x-6 border-b-[.8px] pb-5 border-slate-100 lg:border-0 mt-5">
+          <a class="sosmedLink" href="https://youtube.com/@ptsgn_pgsemboro28?si=2a9aUaIvzEiC5Jnb">
+            <i class="fa-brands fa-youtube"></i>
+           </a>
+           <a class="sosmedLink" href="https://www.instagram.com/pg_semboro?igsh=MTl3aHoyemtxMTl0NA==">
+             <i class="fa-brands fa-instagram"></i>
+           </a>
+        </div>
+      </div>
+      <div class="pt-5">
+        <h3 class="text-sm text-center">&copy; PABRIK GULA SEMBORO 1921</h3>
       </div>
   </footer>
   

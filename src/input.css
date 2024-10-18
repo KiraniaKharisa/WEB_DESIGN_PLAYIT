@@ -281,3 +281,27 @@
 .cardmenu .info h3 {
   @apply text-xl font-ubuntu font-semibold tracking-wider;
 }
+
+.sosmedLink {
+  @apply border-[1px] border-slate-100 w-[40px] h-[40px] rounded-full flex justify-center items-center text-[17px] hover:text-slate-800 relative z-[1] overflow-hidden transition-all duration-500 before:w-0 before:h-full before:absolute before:bg-slate-100 before:top-0 before:left-0 before:transition-all before:duration-500 before:z-[-1] hover:before:w-full;
+}
+
+.inputDiv {
+  @apply relative;
+}
+.inputKontak {
+  @apply border-0 outline-none border-[1px] border-orange-500 rounded-sm px-3 py-2 text-[14px] w-full bg-transparent;
+}
+.spanInput, .spanInputArea {
+  @apply w-0 h-full bg-orange-500 opacity-10 z-[-1] absolute top-0 left-0 transition-all duration-500;
+}
+.inputKontak:hover + .spanInput,
+.inputKontak:focus + .spanInput,
+.inputKontak:hover + .spanInputArea,
+.inputKontak:focus + .spanInputArea
+{
+  @apply w-full;
+}
+.spanInputArea {
+  @apply h-[90%]
+}
