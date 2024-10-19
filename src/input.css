@@ -6,41 +6,31 @@
 .bg-bg1 {
     background: url("../img/bg-1.jpeg");
 }
-.bg-bg2 {
-    background: url("../img/bg-2.jpeg");
+
+
+.pariwisata1 {
+    background: url("../img/pariwisata/bg-1.png");
 }
-.bg-bg3 {
-    background: url("../img/bg-3.jpeg");
+.pariwisata2 {
+    background: url("../img/pariwisata/bg-2.jpg");
 }
-.bg-bg4 {
-    background: url("../img/bg-4.jpeg");
+.pariwisata3 {
+    background: url("../img/pariwisata/3.png");
 }
-.bg-bg5 {
-    background: url("../img/bg-5.jpeg");
+.pariwisata4 {
+    background: url("../img/pariwisata/4.jpg");
 }
-.bg-bg6 {
-    background: url("../img/bg-6.jpg");
+.pariwisata5 {
+    background: url("../img/pariwisata/5.png");
 }
-.bg-bg7 {
-    background: url("../img/bg-7.jpg");
+.pariwisata6 {
+    background: url("../img/pariwisata/6.png");
 }
-.bg-bg8 {
-    background: url("../img/bg-8.jpeg");
-}
-.bg-bg9 {
-    background: url("../img/bg-9.jpeg");
-}
-.bg-bg10 {
-    background: url("../img/bg-10.jpg");
-}
-.bg-bg11 {
-    background: url("../img/bg-11.jpg");
-}
-.bg-bg12 {
-    background: url("../img/bg-12.jpeg");
-}
-.bg-bg13 {
-    background: url("../img/bg-13.jpg");
+
+#beranda {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .nav-link{
@@ -161,12 +151,8 @@
   @apply relative max-w-[600px] transition-all duration-300 p-[20px] md:p-[40px] text-slate-300 opacity-0 translate-y-16;
 }
 .content h1 {
-  @apply text-2xl md:text-5xl font-poppins tracking-widest font-extrabold md:mb-2;
+  @apply text-2xl md:text-5xl font-poppins tracking-widest font-extrabold md:mb-2 lg:text-nowrap;
   text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
-}
-.content p {
-  @apply text-sm md:text-lg font-ubuntu tracking-wider font-semibold;
-  text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
 }
 
 .slider .slides:nth-child(1) .content,
@@ -179,108 +165,6 @@
   @apply w-[50px] h-[50px] rounded-full bg-orange-500 flex justify-center items-center text-xl mt-5 lg:mt-0;
 }
 
-.sliderUmkm {
-  @apply w-full overflow-hidden h-[180px] relative mb-10;
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    #000 5% 95%,
-    transparent
-  );
-}
-
-.sliderUmkm .list {
-  @apply flex gap-x-3;
-}
-
-.cardmenu {
-  @apply w-[200px] h-[170px] rounded-md bg-blue-200 px-5 py-3 flex justify-center items-center flex-col absolute left-full transition-all duration-500;
-  animation: umkmPlay 10s linear infinite;
-  animation-delay: calc((10s / var(--jumlah)) * (var(--position) - 1))!important;
-}
-.sliderUmkm[reverse="true"] .cardmenu {
-  animation: umkmPlayReverse 10s linear infinite;
-}
-
-.cardmenu:hover {
-  @apply bg-orange-500;
-}
-
-.sliderUmkm:hover .cardmenu {
-  animation-play-state: paused!important;
-}
-
-
-
-@keyframes umkmPlay {
-  from {
-    @apply left-full;
-  }
-  to {
-    left: calc(200px * -8.7);
-  }
-}
-
-@keyframes umkmPlayReverse {
-  from {
-    left: calc(200px * -8.7);
-  }
-  to {
-    @apply left-full;
-  }
-}
-
-@media (min-width: 768px) {
-  @keyframes umkmPlay {
-    from {
-      @apply left-full;
-    }
-    to {
-      left: calc(200px * -7.3);
-    }
-  }
-
-  @keyframes umkmPlayReverse {
-    from {
-      left: calc(200px * -7.3);
-    }
-    to {
-      @apply left-full;
-    }
-  }
-}
-
-@media (min-width: 1024px) {
-  @keyframes umkmPlay {
-    from {
-      @apply left-full;
-    }
-    to {
-      left: calc(200px * -6.3);
-    }
-  }
-
-  @keyframes umkmPlayReverse {
-    from {
-      left: calc(200px * -6.3);
-    }
-    to {
-      @apply left-full;
-    }
-  }
-}
-
-.cardmenu .gambar {
-  @apply w-full;
-}
-
-.cardmenu .info {
-  @apply text-center;
-}
-
-.cardmenu .info h3 {
-  @apply text-xl font-ubuntu font-semibold tracking-wider;
-}
 
 .sosmedLink {
   @apply border-[1px] border-slate-100 w-[40px] h-[40px] rounded-full flex justify-center items-center text-[17px] hover:text-slate-800 relative z-[1] overflow-hidden transition-all duration-500 before:w-0 before:h-full before:absolute before:bg-slate-100 before:top-0 before:left-0 before:transition-all before:duration-500 before:z-[-1] hover:before:w-full;
@@ -304,4 +188,122 @@
 }
 .spanInputArea {
   @apply h-[90%]
+}
+
+.sliderBudaya {
+  @apply w-full h-[150px] overflow-hidden relative;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 5% 95%,
+    transparent
+  );
+}
+.sliderBudaya .list {
+  @apply flex gap-x-5;
+}
+.sliderBudaya .list .gambarSlide {
+  @apply w-[200px] h-[150px] object-cover absolute left-full rounded-lg transition-all duration-300;
+  animation: sliderPlay 10s linear infinite;
+  animation-delay: calc((10s / var(--jumlah)) * (var(--position) - 1));
+}
+.sliderBudaya .list .gambarSlide:hover {
+  filter: grayscale(0);
+}
+
+.sliderBudaya:hover .gambarSlide {
+  animation-play-state: paused!important;
+  filter: grayscale(1);
+}
+
+@keyframes sliderPlay {
+  from {
+    @apply left-full;
+  }
+  to {
+    left: calc(200px * -8.7);
+  }
+}
+
+@media (min-width: 768px) {
+  @keyframes sliderPlay {
+    from {
+      @apply left-full;
+    }
+    to {
+      left: calc(200px * -7.3);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  @keyframes sliderPlay {
+    from {
+      @apply left-full;
+    }
+    to {
+      left: calc(200px * -6);
+    }
+  }
+}
+
+.gridTemplate {
+  display: grid;
+  grid-template-areas: 
+  "item1"
+  "item2"
+  "item3";
+  grid-gap: 10px;
+  @apply mt-10 h-auto lg:h-[400px];
+}
+@media (min-width: 768px) {
+  .gridTemplate {
+    grid-template-areas: 
+    "item1 item2"
+    "item1 item3";
+  }
+  
+}
+
+.gridTemplate .items1 {
+  grid-area: item1;
+  background: url("../img/tempat.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.gridTemplate .items2 {
+  grid-area: item2;
+  background: url("../img/makanan.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.gridTemplate .items3 {
+  grid-area: item3;
+  background: url("../img/minuman.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.gridTemplate div {
+  @apply rounded-md text-slate-100 relative flex justify-center items-center flex-col px-5 py-3 overflow-hidden;
+}
+.gridTemplate div .bgText {
+  @apply absolute w-full h-full top-0 left-0 bg-slate-900 z-[1] opacity-0 transition-all duration-300;
+}
+.gridTemplate div:hover .bgText {
+  @apply opacity-60;
+}
+.gridTemplate div .text {
+  @apply translate-y-[300px] relative z-[3] transition-all duration-500;
+}
+.gridTemplate div:hover .text {
+  @apply translate-y-0;
+}
+.gridTemplate div .text h3 {
+  @apply relative z-[2] text-xl font-bold;
+}
+.gridTemplate div .text p {
+  @apply relative z-[2] text-[12px] text-center mt-2;
 }
