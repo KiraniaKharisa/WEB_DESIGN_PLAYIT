@@ -1052,6 +1052,10 @@ video {
   opacity: 0.5;
 }
 
+.opacity-60 {
+  opacity: 0.6;
+}
+
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -1079,7 +1083,7 @@ video {
 /* BACKGROUND */
 
 .bg-bg1 {
-  background: url("../img/bg-1.jpeg");
+  background: url("../img/bg-home.png");
 }
 
 .pariwisata1 {
@@ -2059,6 +2063,10 @@ video {
   .md\:gap-x-6 {
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
+  }
+
+  .md\:gap-y-10 {
+    row-gap: 2.5rem;
   }
 
   .md\:px-10 {
