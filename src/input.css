@@ -27,6 +27,32 @@
     background: url("../img/pariwisata/6.png");
 }
 
+.loading {
+  @apply fixed top-0 left-0 bg-slate-100 w-full h-full z-[999] flex justify-center items-center;
+}
+.loading .items {
+  @apply relative w-[100px] h-[100px];
+}
+.loading .items span {
+  @apply absolute top-0 left-0 w-full h-full before:content-[''] before:absolute before:top-0 before:left-0 before:w-[10px] before:h-[10px] before:bg-orange-500 before:rounded-full;
+  transform: rotate(calc(18deg * var(--position)));
+}
+.loading .items span::before {
+  box-shadow: 0 0 10px var(--shadowColor),
+  0 0 10px var(--shadowColor),
+  0 0 20px var(--shadowColor);
+  animation: animateLoad 2s linear infinite;
+  animation-delay: calc(0.1s * var(--position));
+}
+@keyframes animateLoad {
+  0% {
+    transform: scale(1);
+  }
+  80%, 100% {
+    transform: scale(0);
+  }
+}
+
 #beranda {
   background-size: cover;
   background-repeat: no-repeat;

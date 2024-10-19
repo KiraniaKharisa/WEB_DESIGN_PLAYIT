@@ -42,3 +42,7 @@ document.querySelector(".prev").addEventListener("click", () => {
 })
 
 setInterval(nextSlide, 3000);
+
+window.addEventListener("load", () => {
+  document.querySelector(".loading").style.display = "none";
+})

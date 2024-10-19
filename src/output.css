@@ -1106,6 +1106,69 @@ video {
   background: url("../img/pariwisata/6.png");
 }
 
+.loading {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+}
+
+.loading .items {
+  position: relative;
+  height: 100px;
+  width: 100px;
+}
+
+.loading .items span {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.loading .items span::before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 10px;
+  width: 10px;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+.loading .items span {
+  transform: rotate(calc(18deg * var(--position)));
+}
+
+.loading .items span::before {
+  box-shadow: 0 0 10px var(--shadowColor),
+  0 0 10px var(--shadowColor),
+  0 0 20px var(--shadowColor);
+  animation: animateLoad 2s linear infinite;
+  animation-delay: calc(0.1s * var(--position));
+}
+
+@keyframes animateLoad {
+  0% {
+    transform: scale(1);
+  }
+
+  80%, 100% {
+    transform: scale(0);
+  }
+}
+
 #beranda {
   background-size: cover;
   background-repeat: no-repeat;
