@@ -333,3 +333,78 @@
 .gridTemplate div .text p {
   @apply relative z-[2] text-[12px] text-center mt-2;
 }
+
+.cardTestimoni .top h3{
+  @apply text-[18px] font-bold mb-1;
+}
+
+.cardTestimoni .message{
+  @apply mt-3 tracking-wider
+}
+
+.sliderTestimoni{
+  @apply w-full h-[210px] overflow-hidden relative;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 5% 95%,
+    transparent
+  );
+}
+
+.cardTestimoni .top .bintang i{
+@apply text-gray-500
+}
+
+.cardTestimoni .top .bintang i.active{
+  @apply text-yellow-500
+}
+
+.sliderTestimoni .list {
+    @apply flex gap-x-5;
+}
+
+.sliderTestimoni .list .cardTestimoni {
+  @apply w-[450px] h-[200px] bg-slate-200 p-4 rotate-[1deg] object-cover absolute left-full rounded-lg transition-all duration-300;
+  animation: sliderTestimoniKey 20s linear infinite;
+  animation-delay: calc((20s / var(--jumlah)) * (var(--position) - 1));
+}
+.sliderTestimoni .list .cardTestimoni:hover {
+  filter: grayscale(0);
+}
+
+.sliderTestimoni:hover .cardTestimoni {
+  animation-play-state: paused!important;
+  filter: grayscale(1);
+}
+
+@keyframes sliderTestimoniKey {
+  from {
+    @apply left-full;
+  }
+  to {
+    left: calc(450px * -8.7);
+  }
+}
+
+@media (min-width: 768px) {
+  @keyframes sliderTestimoniKey {
+    from {
+      @apply left-full;
+    }
+    to {
+      left: calc(450px * -7.3);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  @keyframes sliderTestimoniKey {
+    from {
+      @apply left-full;
+    }
+    to {
+      left: calc(450px * -7.5);
+    }
+  }
+}
