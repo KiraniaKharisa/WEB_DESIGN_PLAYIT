@@ -414,6 +414,14 @@
   opacity: 0;
 }
 
+.judul-1, .judul-2, .judul-3, .judul-4, .judul-5{
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.img-sjarah{
+  transform: translateX(50%);
+  opacity: 0;
+}
 /* TESTIMONI PAGE */
 .cardTestimoniPage {
   @apply bg-slate-200 p-4 rounded-lg transition-all duration-300 shadow-xl;
