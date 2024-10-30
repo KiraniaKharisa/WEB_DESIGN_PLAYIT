@@ -2073,6 +2073,11 @@ video {
   }
 }
 
+.animasi{
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
 /* TESTIMONI PAGE */
 
 .cardTestimoniPage {
