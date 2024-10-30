@@ -203,7 +203,7 @@
   @apply border-0 outline-none border-[1px] border-orange-500 rounded-sm px-3 py-2 text-[14px] w-full bg-transparent;
 }
 .spanInput, .spanInputArea {
-  @apply w-0 h-full bg-orange-500 opacity-10 z-[-1] absolute top-0 left-0 transition-all duration-500;
+  @apply w-0 h-full bg-orange-500 opacity-20 z-[-1] absolute top-0 left-0 transition-all duration-500;
 }
 .inputKontak:hover + .spanInput,
 .inputKontak:focus + .spanInput,
@@ -365,9 +365,9 @@
 }
 
 .sliderTestimoni .list .cardTestimoni {
-  @apply w-[450px] h-[200px] bg-slate-200 p-4 rotate-[1deg] object-cover absolute left-full rounded-lg transition-all duration-300;
-  animation: sliderTestimoniKey 20s linear infinite;
-  animation-delay: calc((20s / var(--jumlah)) * (var(--position) - 1));
+  @apply w-[450px] h-[200px] bg-slate-200 p-4 rotate-[1deg] absolute left-full rounded-lg transition-all duration-300;
+  animation: sliderTestimoniKey 30s linear infinite;
+  animation-delay: calc((30s / var(--jumlah)) * (var(--position) - 1));
 }
 .sliderTestimoni .list .cardTestimoni:hover {
   filter: grayscale(0);
@@ -383,7 +383,7 @@
     @apply left-full;
   }
   to {
-    left: calc(450px * -8.7);
+    left: calc(450px * -9.5);
   }
 }
 
@@ -393,7 +393,7 @@
       @apply left-full;
     }
     to {
-      left: calc(450px * -7.3);
+      left: calc(450px * -8.5);
     }
   }
 }
@@ -407,4 +407,28 @@
       left: calc(450px * -7.5);
     }
   }
+}
+
+
+/* TESTIMONI PAGE */
+.cardTestimoniPage {
+  @apply bg-slate-200 p-4 rounded-lg transition-all duration-300 shadow-xl;
+}
+.cardTestimoniPage:hover {
+  @apply bg-slate-300;
+}
+.cardTestimoniPage .top h3{
+  @apply text-[18px] font-bold mb-1;
+}
+
+.cardTestimoniPage .message{
+  @apply mt-3 tracking-wider text-sm;
+}
+
+.cardTestimoniPage .top .bintang i{
+@apply text-gray-500;
+}
+
+.cardTestimoniPage .top .bintang i.active{
+  @apply text-yellow-500;
 }
