@@ -7,6 +7,9 @@
     background: url("../img/bg-home.png");
 }
 
+html, body {
+    overflow-x: hidden;
+}
 
 .pariwisata1 {
     background: url("../img/pariwisata/bg-1.png");
