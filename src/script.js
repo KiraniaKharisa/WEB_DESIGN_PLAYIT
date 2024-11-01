@@ -251,3 +251,39 @@ fetch("https://script.google.com/macros/s/AKfycbyQYB5Z92amHj6Tijrub_Qtun4WgX2E2N
           </div>`)
     });
   });
+
+
+  document.querySelector(".formData").addEventListener("submit", (e) => {
+    e.preventDefault()
+
+    const nama = document.querySelector("#namaPertama").value + " " + document.querySelector("#namaKedua").value;
+    const email = document.querySelector("#email").value;
+    const pesan = document.querySelector("#pesan").value;
+
+    data = {
+        "nama": nama,
+        "email": email,
+        "pesan": pesan
+    }
+
+    fetch("https://script.google.com/macros/s/AKfycbyQYB5Z92amHj6Tijrub_Qtun4WgX2E2N7jY5J8dSFL1doYClTVHQsahrPN10TL0uNk/exec?action=tambahKontak", {
+        method: "POST",
+        mode: 'no-cors',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(res => {
+        document.querySelector("#namaPertama").value = ""; 
+        document.querySelector("#namaKedua").value = "";
+        document.querySelector("#email").value = "";
+        document.querySelector("#pesan").value = "";
+
+       
+        document.querySelector(".successAlert").classList.add("ada");
+        setTimeout(() => {
+            document.querySelector(".successAlert").classList.remove("ada");
+        }, 3000)
+    })
+});

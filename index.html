@@ -478,25 +478,28 @@
         <img class="w-full" src="img/call.svg" alt="" />
       </div>
         
-      <form action="" method="get" accept-charset="utf-8" class="mt-10 animasi-deskripsi flex flex-col gap-y-5 md:w-[55%] w-full lg:gap-y-7">
+      <form  class="mt-10 formData animasi-deskripsi flex flex-col gap-y-5 md:w-[55%] w-full lg:gap-y-7">
+        <div class="w-full bg-orange-200 rounded px-3 py-2 successAlert">
+          <p class="text-gray-700 text-sm">Terima Kasih Telah Menghubungi Kami, Thank You :)</p>
+        </div>
         <div class="flex flex-col gap-y-5 lg:flex-row lg:gap-x-5 lg:w-full">
           <div class="inputDiv lg:w-full">
-            <input type="text" placeholder="Nama Pertama..." class="inputKontak" />
+            <input id="namaPertama" type="text" placeholder="Nama Pertama..." class="inputKontak" />
             <span class="spanInput"></span>
           </div>
           <div class="inputDiv lg:w-full">
-            <input type="text" placeholder="Nama Terakhir..." class="inputKontak" />
+            <input id="namaKedua" type="text" placeholder="Nama Terakhir..." class="inputKontak" />
             <span class="spanInput"></span>
           </div>
         </div>
         
           <div class="inputDiv">
-          <input type="text" placeholder="Email..."  class="inputKontak"/>
+          <input id="email" type="text" placeholder="Email..."  class="inputKontak"/>
             <span class="spanInput"></span>
           </div>
           
           <div class="inputDiv">
-          <textarea class="inputKontak resize-none" placeholder="Pesan..."></textarea>
+          <textarea id="pesan" class="inputKontak resize-none" placeholder="Pesan..."></textarea>
             <span class="spanInputArea"></span>
           </div>
           
