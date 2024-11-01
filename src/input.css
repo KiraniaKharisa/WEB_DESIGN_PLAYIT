@@ -447,3 +447,10 @@ html, body {
 .cardTestimoniPage .top .bintang i.active{
   @apply text-yellow-500;
 }
+.successAlert {
+  display: none;
+}
+.successAlert.ada {
+  display: block;
+  transition: all .5s ease-in-out;
+}

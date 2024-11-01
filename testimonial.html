@@ -47,25 +47,34 @@
       
       <div class="flex justify-center flex-col w-full items-center px-3 lg:px-7 mb-10">
         <h1 class="xl:text-5xl lg:text-3xl text-2xl text-center font-bold font-Poppins text-slate-950 leading-relaxed mt-10">TAMBAHKAN TESTIMONIMU</h1>
-        <form action="" method="get" accept-charset="utf-8" class="mt-10 flex flex-col gap-y-5 md:w-[60%] w-[90%] lg:gap-y-7">
+
+        <form class="formData mt-10 flex flex-col gap-y-5 md:w-[60%] w-[90%] lg:gap-y-7">
+          <div class="w-full bg-orange-200 rounded px-3 py-2 successAlert">
+            <p class="text-gray-700 text-sm">Success Menambahkan Testimonial Kamu, Thank You :)</p>
+          </div>
           <div class="flex flex-col gap-y-5 md:flex-row md:gap-x-5 md:w-full">
             <div class="inputDiv md:w-full">
-              <input type="text" placeholder="Nama Pertama..." class="inputKontak" />
+              <input type="text" id="namaPertama" placeholder="Nama Pertama..." class="inputKontak" />
               <span class="spanInput"></span>
             </div>
             <div class="inputDiv md:w-full">
-              <input type="text" placeholder="Nama Terakhir..." class="inputKontak" />
+              <input type="text" id="namaKedua" placeholder="Nama Terakhir..." class="inputKontak" />
               <span class="spanInput"></span>
             </div>
           </div>
           
             <div class="inputDiv">
-            <input type="text" placeholder="Email..."  class="inputKontak"/>
-              <span class="spanInput"></span>
+              <select id="bintang" class="block appearance-none w-full bg-gray-200 border border-orange-500 text-gray-700 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-orange-500">
+                <option value="1">Bintang 1</option>
+                <option value="2">Bintang 2</option>
+                <option value="3">Bintang 3</option>
+                <option value="4">Bintang 4</option>
+                <option value="5">Bintang 5</option>
+              </select>
             </div>
             
             <div class="inputDiv">
-            <textarea class="inputKontak resize-none textArea" placeholder="Pesan..." maxlength="150"></textarea>
+            <textarea class="inputKontak resize-none textArea" placeholder="Pesan..." maxlength="150" id="pesan"></textarea>
             <span class="absolute text-sm -bottom-5 right-0 textValueArea"><span>0</span>/150</span>
               <span class="spanInputArea"></span>
             </div>
@@ -80,22 +89,8 @@
       <div class="w-full border-t-[1px] border-gray-300"></div>
       <h1 class="xl:text-5xl lg:text-3xl text-2xl text-center font-bold font-Poppins text-slate-950 leading-relaxed mt-10">KUMPULAN TESTIMONI</h1>
 
-    <div class="p-4 lg:p-10 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-3 md:gap-5 lg:gap-7 justify-center items-center">
-      <div class="cardTestimoniPage">
-          <div class="top">
-            <h3>Aldi Prasetyo</h3>
-            <div class="bintang">
-              <i class="bi bi-star-fill active"></i>
-              <i class="bi bi-star-fill active"></i>
-              <i class="bi bi-star-fill active"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-            </div>
-          </div>
-          <div class="message">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident praesentium ut aliquam quibusdam unde ducimus nisi at sapiente magnam aspernatur.</p>
-          </div>
-        </div>
+    <div class="contentCardTestimonial p-4 lg:p-10 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-3 md:gap-5 lg:gap-7 justify-center items-center">
+
     </div>
     
     <footer class="bg-gray-800 text-white py-6 px-5 lg:px-10">

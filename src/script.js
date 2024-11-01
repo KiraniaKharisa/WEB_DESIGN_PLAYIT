@@ -224,3 +224,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 })
+
+fetch("https://script.google.com/macros/s/AKfycbyQYB5Z92amHj6Tijrub_Qtun4WgX2E2N7jY5J8dSFL1doYClTVHQsahrPN10TL0uNk/exec?action=dapatkansebagian&banyakData=10")
+.then(res => {
+    return res.json();
+})
+.then(data => {
+  data.data.forEach((el, i) => {
+    const stars = Array.from({ length: 5 }, (_, index) => {
+        return index < el.BINTANG ? 
+            '<i class="bi bi-star-fill active"></i>' : 
+            '<i class="bi bi-star-fill"></i>';
+    }).join('');
+
+    document.querySelector(".sliderTestimoni .list").insertAdjacentHTML("beforeend", `
+    <div class="cardTestimoni" style="--position: ${i + 1};">
+            <div class="top">
+              <h3>${el.NAMA}</h3>
+              <div class="bintang">
+                ${stars}
+              </div>
+            </div>
+            <div class="message">
+              <p>${el.PESAN}</p>
+            </div>
+          </div>`)
+    });
+  });
